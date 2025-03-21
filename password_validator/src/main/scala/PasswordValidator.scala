@@ -6,7 +6,7 @@ object PasswordValidator {
     val hasDigit = password.exists(_.isDigit)
 //    has at least one small/capital letter
     val hasLower = password.exists(_.isLower)
-    val hasUpper = password.exists(_.isUpper
+    val hasUpper = password.exists(_.isUpper)
 //    must not have space, quotation mark, slash, or an apostrophe
     val noInvalidChars = !password.exists(c => c == ' ' || c == '/' || c == '\"' || c == '\'')
 //    has at least 8 characters (length)
@@ -15,6 +15,7 @@ object PasswordValidator {
 //    password must align with the above requirements
     hasDigit && hasLower && hasUpper && noInvalidChars && minLength
   }
+
 
 //   main function that takes an array of string arguments
   def main(args: Array[String]): Unit = {
