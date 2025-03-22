@@ -8,6 +8,12 @@ This is a simple password validation tool that checks password strength based on
 - Special character enforcement
 - Numeric inclusion
 
+## Front-end
+Front end design
+![Excalidraw frontend design](images/Excalidraw.png)
+
+
+
 ## Installation
 Clone the repository:
 ```sh
