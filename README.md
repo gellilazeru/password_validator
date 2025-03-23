@@ -15,7 +15,7 @@ Front end design
 ![Excalidraw frontend design](images/Excalidraw.png)
 
 The UI is to be designed with the React framework. According to the planned sketch on Excalidraw, the result of the App.js is displayed below:
-![React Frontend](images/React.png)
+![React Frontend](images/Frontend.png)
 
 
 
