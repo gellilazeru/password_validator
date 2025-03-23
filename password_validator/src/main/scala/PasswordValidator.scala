@@ -18,15 +18,12 @@ object PasswordValidator {
 
 
 //   main function that takes an array of string arguments
-  def main(args: Array[String]): Unit = {
-//    reads user's input as password
+  def main(args: Array[String]): Unit = { //    reads user's input as password
     val password = StdIn.readLine()
 //    calls the function 'isvalidpassword' to check the validity of the password
-    if (isValidPassword(password)) {
-//      if the password is valid print the below
+    if (isValidPassword(password)) { //      if the password is valid print the below
       println("Password valid!")
-    } else {
-//      if the password is not valid, print the below
+    } else { //      if the password is not valid, print the below
       println("Invalid password, try again")
     }
   }

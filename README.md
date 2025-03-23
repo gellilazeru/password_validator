@@ -1,6 +1,6 @@
 # Password Validator
 
-This project provides a simple password validation tool that checks the strength of a password based on several rules and requirements. It ensures that the password meets common security standards, making it more secure for users.
+This project provides a simple password validation tool that checks the strength of a password based on several rules and requirements. It ensures that the password meets the security standards, making it more secure for users.
 
 ### Requirements
 - At least one numeric digit
