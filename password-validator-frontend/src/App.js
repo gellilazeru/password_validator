@@ -7,7 +7,6 @@ const PasswordForm = () => {
   const [retypePassword, setRetypePassword] = useState('');
   const [validationMessage, setValidationMessage] = useState('');
 
-  // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -27,16 +26,12 @@ const PasswordForm = () => {
         body: JSON.stringify({ password: password }),
       });
 
-      // Get the response data as JSON
       const data = await response.json();
 
-      // Debugging: Log the response data
-      console.log("Response from backend:", data);
-
       if (response.ok) {
-        setValidationMessage("Password is valid!");
+        setValidationMessage("Password valid");
       } else {
-        setValidationMessage(data.message || "Password is invalid.");
+        setValidationMessage(data.message || "Invalid password, try again");
       }
     } catch (error) {
       setValidationMessage("An error occurred. Please try again.");
@@ -82,10 +77,8 @@ const PasswordForm = () => {
           onChange={(e) => setRetypePassword(e.target.value)}
         />
         
-        {/* Submit Button */}
         <button onClick={handleSubmit}>Submit</button>
         
-        {/* Validation Message */}
         <p>{validationMessage}</p>
       </div>
     </div>
