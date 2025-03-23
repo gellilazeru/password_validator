@@ -1,6 +1,6 @@
 import React from "react";
-import "./PasswordForm.css"; // Import the external CSS file
-import logo from "./logoHD.png"; // Ensure this is the correct path to your image
+import "./PasswordForm.css"; 
+import logo from "./logoHD.png"; 
 
 const PasswordForm = () => {
   return (
