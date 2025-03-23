@@ -5,18 +5,19 @@ import play.api._
 import play.api.mvc._
 import play.api.libs.json._
 
-// A case class to represent the request body
+import scala.io.StdIn
+
+// Define a simple request class to extract the password from the JSON request body
 case class PasswordRequest(password: String)
 
 object PasswordRequest {
-  // Implicit JSON formatter to convert the PasswordRequest to/from JSON
-  implicit val passwordRequestFormat: OFormat[PasswordRequest] = Json.format[PasswordRequest]
+  implicit val passwordRequestFormat = Json.format[PasswordRequest]
 }
 
 @Singleton
-class ApiController @Inject()(cc: ControllerComponents) extends AbstractController(cc) {
+class PasswordController @Inject()(cc: ControllerComponents) extends AbstractController(cc) {
 
-  // Function to check if the password is valid
+  // Password validation logic
   def isValidPassword(password: String): Boolean = {
     val hasDigit = password.exists(_.isDigit)
     val hasLower = password.exists(_.isLower)
