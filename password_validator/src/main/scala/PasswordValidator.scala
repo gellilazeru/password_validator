@@ -12,10 +12,6 @@ object PasswordValidator {
 //    has at least 8 characters (length)
     val minLength = password.length >= 8
 
-//    debugging
-    println(s"Password: $password")
-    println(s"Has digit: $hasDigit, Has lowercase: $hasLower, Has uppercase: $hasUpper, Valid chars: $noInvalidChars, Min length: $minLength")
-
 //    password must align with the above requirements
     hasDigit && hasLower && hasUpper && noInvalidChars && minLength
   }
@@ -28,7 +24,7 @@ object PasswordValidator {
 //    calls the function 'isvalidpassword' to check the validity of the password
     if (isValidPassword(password)) {
 //      if the password is valid print the below
-      println("password valid")
+      println("Password valid!")
     } else {
 //      if the password is not valid, print the below
       println("Invalid password, try again")
