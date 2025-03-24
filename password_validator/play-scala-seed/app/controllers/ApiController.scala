@@ -5,7 +5,6 @@ import play.api._
 import play.api.mvc._
 import play.api.libs.json._
 
-// A case class to represent the request body
 case class PasswordRequest(password: String)
 
 object PasswordRequest {
@@ -16,7 +15,6 @@ object PasswordRequest {
 @Singleton
 class ApiController @Inject()(cc: ControllerComponents) extends AbstractController(cc) {
 
-  // Function to check if the password is valid
   def isValidPassword(password: String): Boolean = {
     val hasDigit = password.exists(_.isDigit)
     val hasLower = password.exists(_.isLower)
@@ -30,7 +28,6 @@ class ApiController @Inject()(cc: ControllerComponents) extends AbstractControll
     hasDigit && hasLower && hasUpper && noInvalidChars && minLength
   }
 
-  // Action to handle password validation request
   def validatePassword = Action(parse.json) { request =>
     request.body.validate[PasswordRequest].map { passwordRequest =>
       val password = passwordRequest.password
